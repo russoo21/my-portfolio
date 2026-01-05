@@ -61,8 +61,20 @@ h1 { font-size: 3rem; margin: 15px 0; font-weight: 800; }
 
 .btn-secondary { background: rgba(0,0,0,0.05); border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: 600; margin-top: 15px; }
 
+/* This adds the shadow and a thin glass-like outline to your cards */
 .glass, .info-card, .profile-card, .plan-card {
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* The white outline */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* The soft shadow */
+    border-radius: 20px;
     transition: all 0.3s ease;
 }
+
+/* This makes them glow slightly when you hover over them */
+.glass:hover, .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(108, 99, 255, 0.2);
+    border: 1px solid rgba(108, 99, 255, 0.4);
+}
+
