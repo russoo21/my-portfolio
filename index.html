@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyrus Vinchie Vicente | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+
+    <div class="app-wrapper">
+        <nav class="glass-nav">
+            <div class="logo">My Portfolio<span>.</span></div>
+            <div class="nav-links">
+                <button class="n-btn active" onclick="showPage('about', this)">About</button>
+                <button class="n-btn" onclick="showPage('skills', this)">Skills</button>
+                <button class="n-btn" onclick="showPage('roadmap', this)">Action Plan</button>
+            </div>
+            <a href="mailto:cyrusr2109@gmail.com" class="contact-pill" style="text-decoration: none; display: inline-block; text-align: center;">Contact Me</a>
+        </nav>
+
+        <main class="main-stage">
+            <section id="about" class="page active">
+                <div class="hero-flex">
+                    <div class="hero-text glass">
+                        <span class="status-tag">Aspiring Software Engineer</span>
+                        <h1 id="typing-name"></h1>
+                        <p>A Software Engineering enthusiast with a builder mindset. I excel in technical environments where precision, leadership, and logical thinking are key to achieving success.</p>
+                        <div class="profile-upload-zone">
+                            <input type="file" id="profileInput" hidden accept="image/*" onchange="uploadProfile(this.files)">
+                            <button class="btn-secondary" onclick="document.getElementById('profileInput').click()">📸 Upload Your Photo</button>
+                        </div>
+                    </div>
+                    <div class="hero-image-container">
+                        <div class="profile-card glass">
+                        <img id="displayProfile" src="me.jpg" alt="Cyrus Profile">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="triple-grid">
+                    <div class="info-card glass"><h3>🌟 Interests</h3><p>Exploring complex systems and software innovations.</p></div>
+                    <div class="info-card glass"><h3>🤝 Talents</h3><p>Cooperating with teams to achieve common goals through leadership.</p></div>
+                    <div class="info-card glass"><h3>🧠 Soft Skills</h3><p>Methodical problem-solving and logical critical thinking.</p></div>
+                </div>
+            </section>
+
+            <section id="skills" class="page">
+                <div class="skills-hero glass">
+                    <h2>Technical Learning Journey</h2>
+                    <p class="manifesto">I am a fresh noob at coding, but I have the absolute willingness to learn, adapt, and succeed.</p>
+                    <div class="mega-gallery">
+                        <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=600" alt="Code">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="Algorithm">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600" alt="Development">
+                    </div>
+                </div>
+            </section>
+
+            <section id="roadmap" class="page">
+                <div class="roadmap-stack">
+                    <div class="plan-card glass">
+                        <div class="step-badge">Phase 1</div>
+                        <h4>Foundations of Logic</h4>
+                        <p>Mastering HTML, CSS, and basic JavaScript. Transitioning from 'noob' to builder.</p>
+                    </div>
+                    <div class="plan-card glass">
+                        <div class="step-badge">Phase 2</div>
+                        <h4>Structural Architecture</h4>
+                        <p>Learning Data Structures and Algorithms to write efficient, professional code.</p>
+                    </div>
+                    <div class="plan-card glass">
+                        <div class="step-badge">Phase 3</div>
+                        <h4>Industry Mastery</h4>
+                        <p>Building full-stack applications and adapting to AI-driven development for long-term success.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
